@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event || Bubble</title>
+</head>
+
+<body>
+    <h1>Event - Bubble</h1>
+    <section id="container">
+        <h4>Bubble List</h4>
+
+        <ul id="listContainer">
+            <li>Lorem, ipsum.</li>
+            <li id="item2">Adipisci, sed.</li>
+            <li>Iure, saepe.</li>
+            <li>Officia, molestiae.</li>
+            <li>Rem, aliquam!</li>
+            <li>Explicabo, aperiam.</li>
+        </ul>
+    </section>
+
+    <script>
+        document.getElementById("item2").addEventListener("click", function (event) {
+            console.log("1. item 2");
+            event.stopPropagation();
+        });
+
+        document.getElementById("item2").addEventListener("click", function (event) {
+            console.log("2. item 2");
+            event.stopImmediatePropagation();
+        });
+
+        document.getElementById("item2").addEventListener("click", function (event) {
+            console.log("3. item 2");
+            event.stopPropagation();
+        });
+
+        document.getElementById("listContainer").addEventListener("click", function () {
+            console.log("UL");
+        });
+
+        document.getElementById("container").addEventListener("click", function () {
+            console.log("container");
+        });
+    </script>
+</body>
+
+</html>

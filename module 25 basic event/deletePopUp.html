@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Pop Up</title>
+</head>
+
+<body>
+    <h2>More Events</h2>
+    <section>
+        <h3 id="info">info</h3>
+        <input id="confirmDelete" type="text" placeholder="please type delete">
+        <button id="deleteBtn" disabled>Delete</button>
+    </section>
+
+    <script>
+        document.getElementById("deleteBtn").addEventListener("click", function () {
+            document.getElementById("info").style.display = "none";
+            document.getElementById("confirmDelete").value = "";
+        });
+
+        document.getElementById("confirmDelete").addEventListener("focus", function () {
+            document.body.style.background = "lightcoral";
+        });
+
+        document.getElementById("confirmDelete").addEventListener("blur", function () {
+            document.body.style.background = "#fff";
+        });
+
+        document.getElementById("confirmDelete").addEventListener("keyup", function (event) {
+            if (event.target.value == "delete") {
+                document.getElementById("deleteBtn").removeAttribute("disabled");
+            } else {
+                document.getElementById("deleteBtn").setAttribute("disabled", true);
+            }
+        });
+
+        document.getElementById("confirmDelete").addEventListener("change", function (event) {
+            if (event.target.value == "delete") {
+                document.getElementById("deleteBtn").removeAttribute("disabled");
+            } else {
+                document.getElementById("deleteBtn").setAttribute("disabled", true);
+            }
+        });
+    </script>
+</body>
+
+</html>

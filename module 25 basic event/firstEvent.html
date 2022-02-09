@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+
+<body>
+    <h1 onclick="document.body.style.backgroundColor = 'blue'; document.body.style.color = '#fff'">Event</h1>
+    <button onclick="bgNrml()">click me</button>
+    <button onclick="bgBlack()">click me (event function)</button>
+    <button id="makeRedBtn">click me (event id)</button>
+    <button id="mekeGreenBtn">click me (Green)</button>
+    <button id="mekeGoldenRodBtn">click me (Golden Rod)</button>
+    <button id="mekeGrayBtn">click me (Gray)</button>
+    <button id="mekeKhakiBtn">click me (Khaki)</button>
+
+    <script src="./JS/firstEvent.js"></script>
+
+    <script>
+        document.getElementById("mekeKhakiBtn").addEventListener("click", function () {
+            document.body.style.backgroundColor = "khaki";
+            document.body.style.color = "blue";
+        });
+    </script>
+</body>
+
+</html>

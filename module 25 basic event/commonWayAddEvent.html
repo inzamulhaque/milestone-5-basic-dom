@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<body>
+    <p id="clickedMethod"></p>
+    <input type="text" value="" id="input">
+    <button onclick="update()">Update</button>
+    <button onclick="handleClick()">Just Function</button>
+    <button id="addEvent">Add Enevt</button>
+
+    <script>
+        const update = () => {
+            const value = document.getElementById("input").value;
+            document.getElementById("clickedMethod").innerText = value;
+            document.getElementById("input").value = "";
+        }
+
+        function handleClick() {
+            document.getElementById("clickedMethod").innerText = "Just Function";
+        }
+
+        document.getElementById("addEvent").addEventListener("click", () => {
+            document.getElementById("clickedMethod").innerText = "Add Event";
+        });
+    </script>
+</body>
+
+</html>
