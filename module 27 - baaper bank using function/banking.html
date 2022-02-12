@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header>
+        <h1 class="text-5xl text-center mt-16">Dhuksi Amar <span class="font-semibold text-blue-500">Baap Er
+                Bank</span> A😎</h1>
+        <h1 class="text-5xl text-center mt-1">Khali Korbo Account <span class="font-semibold text-blue-500">Ja Ase
+                Kopale</span> 😜</h1>
+    </header>
+
+    <main class="w-3/4 mx-auto">
+        <section class="mt-7">
+            <div class="grid grid-cols-3 gap-3 text-white">
+                <div class="bg-blue-400 p-5">
+                    <h3 class="text-3xl">Deposit</h3>
+                    <h4 class="text-5xl">$<span id="depositAmount">000</span></h4>
+                </div>
+                <div class="bg-sky-300 p-5">
+                    <h3 class="text-3xl">Withdraw</h3>
+                    <h4 class="text-5xl">$<span id="withdrawAmount">000</span></h4>
+                </div>
+                <div class="bg-gray-500 p-5">
+                    <h3 class="text-3xl">Balance</h3>
+                    <h4 class="text-5xl">$<span id="totalBalance">1000</span></h4>
+                </div>
+            </div>
+        </section>
+
+        <!-- Diposit and Withdraw -->
+        <section class="mt-5">
+            <div class="grid grid-cols-2 gap-5">
+                <div class="bg-slate-700 text-white p-5 rounded-md">
+                    <h1 class="text-3xl mb-3">Please Deposit Koro Besi Kore. Joto Taka Ase Tomar Kase😍</h1>
+
+                    <div>
+                        <input id="depositInput"
+                            class="border-2 border-gray-400 rounded-md block w-full p-3 mb-5 text-blue-500"
+                            type="number" placeholder="Enter Your Deposit Amount">
+                        <button id="depositBtn" onclick="depositMoney()"
+                            class="bg-green-500 text-3xl font-medium px-3 py-2 text-white mx-auto rounded-md">Deposit</button>
+                    </div>
+                </div>
+
+                <div class="bg-red-300 text-white p-5 rounded-md">
+                    <h1 class="text-3xl mb-3">Withdraw Koris Na Re. Mone Lage Betha Je😥</h1>
+
+                    <div>
+                        <input id="withdrawInput"
+                            class="border-2 border-gray-400 rounded-md block w-full p-3 mb-5 text-red-500" type="number"
+                            placeholder="Enter Your Withdraw Amount 😡">
+                        <button id="withdrawBtn" onclick="withdrawMenoy()"
+                            class="bg-red-800 text-3xl font-medium px-3 py-2 text-white mx-auto rounded-md">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="./js/banking.js"></script>
+</body>
+
+</html>
