@@ -38,7 +38,7 @@ setInterval(function () {
     const second = date.getSeconds();
 
     document.getElementById("day").innerText = currentDate;
-    document.getElementById("month").innerText = month + 1;
+    document.getElementById("month").innerText = monthName[month];
     document.getElementById("year").innerText = year;
 
     if (hours > 12) {
@@ -58,14 +58,17 @@ setInterval(function () {
     //     hours = "0" + hours;
     // }
 
+    // showTime("hour", hour);
+    // showTime("min", min);
+    // showTime("sec", sec);
+    // showTime("status", status);
+
     showTime("hour", hour);
     showTime("min", min);
     showTime("sec", sec);
     showTime("status", status);
 
     document.getElementById("dayName").innerText = dayName[day];
-    document.getElementById("monthName").innerText = monthName[month];
-    document.getElementById("yearAgain").innerText = year;
 }, 1000);
 
 function addZero(timePart) {
